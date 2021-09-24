@@ -10,7 +10,17 @@ function FechApi() {
   );
 
   if (!data) {
-    return <div>Loading...</div>;
+    return (
+      <div className="d-flex align-items-center justify-content-center fullScreen">
+        <div
+          class="spinner-border text-secondary"
+          role="status"
+          style={{ width: 100 + "px", height: 100 + "px" }}
+        >
+          <span class="sr-only"></span>
+        </div>
+      </div>
+    );
   }
   console.log(error);
 
