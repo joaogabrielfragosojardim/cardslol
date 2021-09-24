@@ -54,7 +54,7 @@
   transition: 0.3s;
 }
 
-.champCard:hover .championTags h2 {
+.champCard:hover .championName {
   transform: translateX(10%);
 }
 

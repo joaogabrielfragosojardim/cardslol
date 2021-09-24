@@ -1,12 +1,15 @@
 import React from "react";
 import "./App.css";
-import "./champs.css"
-import FechApi from "./fetchAPI"; 
+import "./champs.css";
+import FechApi from "./fetchAPI";
+import { BrowserRouter as Router } from "react-router-dom";
 
 function App() {
   return (
     <div>
-      <FechApi></FechApi>
+      <Router>
+        <FechApi />
+      </Router>
     </div>
   );
 }
