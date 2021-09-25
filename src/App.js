@@ -1,16 +1,11 @@
 import React from "react";
 import "./App.css";
-import "./champs.css";
-import FechApi from "./fetchAPI";
-import { BrowserRouter as Router } from "react-router-dom";
+import "./style/champions.css"
+import Dashboard from "./components/layout/Dashboard";
 
 function App() {
   return (
-    <div>
-      <Router>
-        <FechApi />
-      </Router>
-    </div>
+      <Dashboard />
   );
 }
 export default App;
