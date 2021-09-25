@@ -9,7 +9,8 @@ function FechApi() {
     "https://ddragon.leagueoflegends.com/cdn/11.18.1/data/pt_BR/champion.json",
     fetcher
   );
-
+/*   recriar
+ */
   if (!data) {
     return (
       <div className="d-flex align-items-center justify-content-center fullScreen">
