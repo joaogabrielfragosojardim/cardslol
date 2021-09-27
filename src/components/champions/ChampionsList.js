@@ -27,11 +27,16 @@ export default class championsList extends Component {
         {this.state.champion ? (
           <div>
             {this.state.champion.map((champion) => (
-              <ChampionCard />
+              <ChampionCard
+                name={champion.name}
+                url={`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion.id}_0.jpg`}
+                id={champion.id}
+                key={champion.id}
+              />
             ))}
           </div>
         ) : (
-          <h1>Loadin...</h1>
+          <h1>Loading...</h1>
         )}
       </div>
     );
