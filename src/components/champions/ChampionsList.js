@@ -10,27 +10,29 @@ export default class championsList extends Component {
   };
 
   async componentDidMount() {
+    let championsObject = [];
     const res = await axios.get(this.state.url);
-    this.setState({ champion: res.data["data"] });
-    this.setState({ champion: Object.entries(this.state.champion) });
-    this.state.champion.map((champion) => {
-      champion.shift();
-      this.state.champion = champion;
+    let champions = res.data["data"];
+    champions = Object.entries(champions);
+    champions.map((champion) => {
+      championsObject.push(champion[1]);
     });
+
+    this.setState({ champion: championsObject });
   }
 
   render() {
     return (
       <div>
-   {/*      {this.state.champion ? (
+        {this.state.champion ? (
           <div>
             {this.state.champion.map((champion) => (
               <ChampionCard />
             ))}
           </div>
-        ) : ( 
+        ) : (
           <h1>Loadin...</h1>
-        )} */}
+        )}
       </div>
     );
   }
