@@ -8,11 +8,16 @@ export default class championCard extends Component {
   };
   render() {
     const name = this.props.name;
-    const imgUrl = this.props.url
+    const imgUrl = this.props.url;
+    const id = this.props.id;
     return (
-      <div>
-        <h1>{name}</h1>
-        <img src={this.props.url}></img>
+      <div key={id} className="champCard">
+        <div className="imgChampContainer">
+          <img src={imgUrl} alt={name} className="champImg"></img>
+        </div>
+        <div className="championTags">
+          <h2 className="championName">{name}</h2>
+        </div>
       </div>
     );
   }

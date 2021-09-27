@@ -25,18 +25,26 @@ export default class championsList extends Component {
     return (
       <div>
         {this.state.champion ? (
-          <div>
+          <div className="gridChamps">
             {this.state.champion.map((champion) => (
               <ChampionCard
                 name={champion.name}
-                url={`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion.id}_0.jpg`}
+                url={`http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champion.id}_0.jpg`}
                 id={champion.id}
                 key={champion.id}
               />
             ))}
           </div>
         ) : (
-          <h1>Loading...</h1>
+          <div className="d-flex align-items-center justify-content-center fullScreen">
+            <div
+              className="spinner-border text-secondary"
+              role="status"
+              style={{ width: 100 + "px", height: 100 + "px" }}
+            >
+              <span className="sr-only"></span>
+            </div>
+          </div>
         )}
       </div>
     );
