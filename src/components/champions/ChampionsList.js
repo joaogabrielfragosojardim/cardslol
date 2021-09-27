@@ -29,7 +29,7 @@ export default class championsList extends Component {
             {this.state.champion.map((champion) => (
               <ChampionCard
                 name={champion.name}
-                url={`http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champion.id}_0.jpg`}
+                imgUrl={`http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champion.id}_0.jpg`}
                 id={champion.id}
                 key={champion.id}
               />
