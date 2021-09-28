@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
-import "./style/champions.css";
+import "./style/cardChampions.css";
+import "./style/championPage.css"
 import Dashboard from "./components/layout/Dashboard";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Champion from "./components/champions/Champion"

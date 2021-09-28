@@ -29,9 +29,8 @@ export default class Champion extends Component {
   }
   render() {
     return (
-      <div>
+      <div className="championBanner" style={{backgroundImage: `url(${this.state.imgUrl})`}}>
         <img src={this.state.imgUrl} alt={this.state.name}></img>
-        <h1>{this.state.name}</h1>
       </div>
     );
   }
