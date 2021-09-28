@@ -15,7 +15,7 @@ export default class championsList extends Component {
     let champions = res.data["data"];
     champions = Object.entries(champions);
     champions.map((champion) => {
-      championsObject.push(champion[1]);
+      return championsObject.push(champion[1]);
     });
 
     this.setState({ champion: championsObject });
@@ -26,14 +26,17 @@ export default class championsList extends Component {
       <div>
         {this.state.champion ? (
           <div className="gridChamps">
-            {this.state.champion.map((champion) => (
-              <ChampionCard
-                name={champion.name}
-                imgUrl={`http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champion.id}_0.jpg`}
-                id={champion.id}
-                key={champion.id}
-              />
-            ))}
+            {this.state.champion.map((champion) => {
+              return (
+                <ChampionCard
+                  name={champion.name}
+                  imgUrl={`http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champion.id}_0.jpg`}
+                  id={champion.id}
+                  key={champion.id}
+                  alt={champion.name}
+                />
+              );
+            })}
           </div>
         ) : (
           <div className="d-flex align-items-center justify-content-center fullScreen">

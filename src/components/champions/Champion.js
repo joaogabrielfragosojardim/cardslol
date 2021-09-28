@@ -19,7 +19,7 @@ export default class Champion extends Component {
     let champions = championRes.data["data"];
     champions = Object.entries(champions);
     champions.map((champion) => {
-      championObject.push(champion[1]);
+      return championObject.push(champion[1]);
     });
 
     this.setState({ name: championObject[0].id });
@@ -30,11 +30,8 @@ export default class Champion extends Component {
   render() {
     return (
       <div>
-        <img src={this.state.imgUrl}></img>
+        <img src={this.state.imgUrl} alt={this.state.name}></img>
       </div>
     );
   }
 }
-
-/* a
- */
