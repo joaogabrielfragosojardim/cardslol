@@ -31,6 +31,7 @@ export default class Champion extends Component {
     return (
       <div>
         <img src={this.state.imgUrl} alt={this.state.name}></img>
+        <h1>{this.state.name}</h1>
       </div>
     );
   }
