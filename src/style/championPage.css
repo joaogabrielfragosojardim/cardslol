@@ -1,10 +1,106 @@
-.championBanner{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
+.degrade {
+  background-color: rgba(0, 0, 0, 0.767);
+  width: 100%;
+  height: 90vh;
+  position: absolute;
+  top: 0;
+}
+
+.championBanner {
+  width: 100%;
+  height: 90vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.championInformations {
+  position: relative;
+  font-family: serif;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.containerTextInformation {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: -35px;
+  color: white;
+  font-family: serif;
+  font-weight: bold;
+}
+
+.containerTextInformation h3 {
+  font-size: 22px;
+}
+
+.containerTextInformation h2 {
+  font-size: 105px;
+  font-style: italic;
+}
+
+.loreStats {
+  background-color: #000913;
+  color: white;
+}
+
+.stats {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.statsBar {
+  width: 350px;
+  height: 5px;
+  background-color: rgba(0, 0, 0, 0.658);
+  margin: 1px;
+}
+
+.statsInfo {
+  height: 100%;
+  background-color: #006680;
+  position: relative;
+}
+
+.atk::before {
+  content: "ATK";
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  left: -50px;
+  bottom: -5px;
+}
+
+.dfs::before {
+  content: "DFS";
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  left: -50px;
+  bottom: -5px;
+}
+
+
+.mgc::before {
+  content: "MGC";
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  left: -50px;
+  bottom: -5px;
+}
+
+
+.dfy::before {
+  content: "DFY";
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  left: -50px;
+  bottom: -5px;
 }
